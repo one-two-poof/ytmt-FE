@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
 import * as styles from "./chats.css";
+import Header from "./_components/Header";
+import ChatList, { type ThreadItem } from "./_components/ChatList";
 
-const THREADS = [
+const THREADS: ThreadItem[] = [
   {
     id: "1",
     name: "새벽의 여행자",
@@ -20,22 +20,8 @@ const THREADS = [
 export default function ChatsPage() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>채팅</h1>
-      </header>
-      <main className={styles.main}>
-        {THREADS.map((t) => (
-          <Link key={t.id} href={`/chat/${t.id}`} className={styles.row}>
-            <div className={styles.avatar}>
-              <Image src={t.img} alt="" width={52} height={52} style={{ objectFit: "cover" }} />
-            </div>
-            <div style={{ minWidth: 0, flex: 1 }}>
-              <p style={{ fontWeight: 700, marginBottom: "4px" }}>{t.name}</p>
-              <p className={styles.preview}>{t.last}</p>
-            </div>
-          </Link>
-        ))}
-      </main>
+      <Header />
+      <ChatList threads={THREADS} />
     </div>
   );
 }
