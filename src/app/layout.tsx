@@ -22,6 +22,9 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "너도나도",
   description: "비슷한 생각을 하는 사람과 만나는 공간",
+  other: {
+    "google-adsense-account": "ca-pub-9819252635583893",
+  },
 };
 
 export default function RootLayout({
