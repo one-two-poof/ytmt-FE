@@ -7,9 +7,17 @@ globalStyle("*, *::before, *::after", {
   padding: 0,
 });
 
-globalStyle("html, body", {
+globalStyle("html", {
   height: "100%",
-  background: vars.color.background,
+  overflowX: "hidden",
+});
+
+globalStyle("body", {
+  minHeight: "100dvh",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  backgroundColor: "#d8dadd",
   color: vars.color.onBackground,
   fontFamily: vars.font.sans,
   fontSize: vars.fontSize.bodyMd,
