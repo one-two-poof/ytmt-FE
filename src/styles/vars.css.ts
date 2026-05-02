@@ -37,6 +37,15 @@ export const vars = createGlobalTheme(":root", {
     onError: "#ffffff",
     errorContainer: "#ffdad6",
     onErrorContainer: "#93000a",
+
+    tertiary: "#595a57",
+    onTertiary: "#ffffff",
+    tertiaryContainer: "#72726f",
+    onTertiaryContainer: "#faf8f4",
+    secondaryFixed: "#ffe16d",
+    secondaryFixedDim: "#e9c400",
+    primaryFixed: "#e1e0ff",
+    onPrimaryFixed: "#07006c",
   },
   font: {
     sans: "'Plus Jakarta Sans', 'Pretendard', sans-serif",
@@ -90,5 +99,9 @@ export const vars = createGlobalTheme(":root", {
     blur: "blur(16px)",
     surface: "rgba(255, 255, 255, 0.80)",
     border: "rgba(255, 255, 255, 0.40)",
+  },
+  /** 단일 모바일 컬럼 폭 (큰 화면에서는 중앙 프레임) */
+  layout: {
+    mobileMaxWidth: "430px",
   },
 });
