@@ -50,20 +50,6 @@ export const headerTitle = style({
   color: vars.color.primary,
 });
 
-export const avatar = style({
-  width: "40px",
-  height: "40px",
-  borderRadius: vars.radii.full,
-  overflow: "hidden",
-  border: `2px solid rgba(93, 95, 239, 0.15)`,
-});
-
-export const avatarImg = style({
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
-});
-
 export const main = style({
   paddingTop: "96px",
   paddingBottom: "128px",
@@ -93,48 +79,11 @@ export const h2 = style({
   letterSpacing: vars.letterSpacing.tight,
 });
 
-export const card = style({
-  background: "rgba(255,255,255,0.8)",
-  backdropFilter: "blur(20px)",
-  border: "1px solid rgba(255,255,255,0.4)",
-  borderRadius: "24px",
-  padding: vars.space.stackMd,
-  boxShadow: "0 8px 32px rgba(93,95,239,0.08)",
-  display: "flex",
-  flexDirection: "column",
-  gap: vars.space.stackSm,
-  position: "relative",
-  overflow: "hidden",
-});
-
-export const matchBadge = style({
-  position: "absolute",
-  top: "16px",
-  right: "16px",
-  backgroundColor: "rgba(252,212,0,0.2)",
-  color: vars.color.secondary,
-  padding: "4px 12px",
-  borderRadius: vars.radii.full,
-  fontSize: vars.fontSize.labelSm,
-  fontWeight: vars.fontWeight.semibold,
-  display: "flex",
-  alignItems: "center",
-  gap: "4px",
-});
-
 export const row = style({
   display: "flex",
   alignItems: "center",
   gap: "12px",
   marginBottom: "8px",
-});
-
-export const miniAvatar = style({
-  width: "48px",
-  height: "48px",
-  borderRadius: vars.radii.full,
-  overflow: "hidden",
-  boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
 });
 
 export const quote = style({

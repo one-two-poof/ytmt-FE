@@ -48,34 +48,6 @@ export const main = style({
   gap: vars.space.stackLg,
 });
 
-export const glassCard = style({
-  background: "rgba(255,255,255,0.75)",
-  backdropFilter: "blur(12px)",
-  border: "1px solid rgba(255,255,255,0.4)",
-  borderRadius: "24px",
-  padding: "24px",
-  boxShadow: "0 30px 50px -20px rgba(67,67,213,0.06)",
-});
-
-export const label = style({
-  display: "block",
-  fontSize: "11px",
-  fontWeight: vars.fontWeight.semibold,
-  letterSpacing: "0.08em",
-  textTransform: "uppercase",
-  color: vars.color.primary,
-  marginBottom: "8px",
-});
-
-export const input = style({
-  width: "100%",
-  backgroundColor: vars.color.surfaceContainerLow,
-  border: "none",
-  borderRadius: "12px",
-  padding: "12px 16px",
-  fontSize: vars.fontSize.bodyMd,
-});
-
 export const dangerBtn = style({
   width: "100%",
   display: "flex",

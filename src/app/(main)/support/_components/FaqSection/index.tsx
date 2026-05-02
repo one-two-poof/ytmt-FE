@@ -1,5 +1,5 @@
+import { Card } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
-import * as styles from "../../support.css";
 
 const FAQ = [
   {
@@ -25,7 +25,7 @@ export default function FaqSection() {
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         {FAQ.map((item) => (
-          <div key={item.q} className={styles.glassCard}>
+          <Card key={item.q}>
             <details style={{ cursor: "pointer" }}>
               <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", listStyle: "none", fontWeight: 600, fontSize: "16px", color: "#4343d5" }}>
                 <span style={{ paddingRight: "16px" }}>{item.q}</span>
@@ -35,7 +35,7 @@ export default function FaqSection() {
                 <p style={{ color: "#464555", lineHeight: 1.6 }}>{item.a}</p>
               </div>
             </details>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Avatar } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
 import * as styles from "../../home.css";
 
@@ -15,7 +15,7 @@ export default function Header({ avatarSrc }: Props) {
         </button>
         <h1 className={styles.headerTitle}>너도나도</h1>
       </div>
-      <Image src={avatarSrc} alt="프로필" width={32} height={32} className={styles.avatarSm} unoptimized />
+      <Avatar src={avatarSrc} alt="프로필" size="sm" />
     </header>
   );
 }

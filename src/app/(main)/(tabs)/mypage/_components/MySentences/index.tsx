@@ -1,5 +1,5 @@
+import { Badge, Card } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
-import * as styles from "../../mypage.css";
 
 export interface SentenceItem {
   id: string;
@@ -22,17 +22,15 @@ export default function MySentences({ sentences }: Props) {
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
         {sentences.map((s) => (
-          <div key={s.id} className={styles.sentenceCard}>
+          <Card key={s.id} style={{ position: "relative" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
               {s.type === "today" ? (
-                <span style={{ fontSize: "13px", fontWeight: 600, backgroundColor: "rgba(112,93,0,0.05)", padding: "4px 8px", borderRadius: "999px", display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                <Badge variant="spark">
                   <MaterialIcon name="auto_awesome" style={{ fontSize: "14px" }} />
                   오늘의 생각
-                </span>
+                </Badge>
               ) : (
-                <span style={{ fontSize: "13px", fontWeight: 600, color: "#464555", backgroundColor: "#eceef1", padding: "4px 8px", borderRadius: "999px" }}>
-                  과거 기록
-                </span>
+                <Badge variant="surface">과거 기록</Badge>
               )}
               <div style={{ display: "flex", gap: "8px" }}>
                 <button type="button" aria-label="수정">
@@ -53,7 +51,7 @@ export default function MySentences({ sentences }: Props) {
                 {s.empathyCount}명의 공감
               </span>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

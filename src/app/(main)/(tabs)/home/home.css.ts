@@ -8,8 +8,7 @@ export const page = style({
   fontFamily: vars.font.sans,
   fontSize: vars.fontSize.bodyMd,
   color: vars.color.onSurface,
-  background:
-    "radial-gradient(circle at top left, #f7f9fc 0%, #eceef1 100%)",
+  background: "radial-gradient(circle at top left, #f7f9fc 0%, #eceef1 100%)",
   overflowX: "hidden",
 });
 
@@ -50,14 +49,6 @@ export const headerTitle = style({
   color: vars.color.primary,
 });
 
-export const avatarSm = style({
-  width: "32px",
-  height: "32px",
-  borderRadius: vars.radii.full,
-  border: `2px solid rgba(93, 95, 239, 0.15)`,
-  objectFit: "cover",
-});
-
 export const main = style({
   paddingTop: "96px",
   paddingBottom: "128px",
@@ -81,27 +72,6 @@ export const statusBar = style({
   border: "1px solid rgba(255,255,255,0.6)",
 });
 
-export const badge = style({
-  fontSize: vars.fontSize.labelSm,
-  fontWeight: vars.fontWeight.semibold,
-  letterSpacing: vars.letterSpacing.wide,
-  color: vars.color.primary,
-  backgroundColor: "rgba(93, 95, 239, 0.08)",
-  padding: "4px 12px",
-  borderRadius: vars.radii.full,
-});
-
-export const glassCard = style({
-  background: "rgba(255, 255, 255, 0.75)",
-  backdropFilter: "blur(20px)",
-  WebkitBackdropFilter: "blur(20px)",
-  border: "1px solid rgba(255, 255, 255, 0.4)",
-  borderRadius: "24px",
-  padding: vars.space.stackMd,
-  boxShadow: "0 20px 50px rgba(67, 67, 213, 0.08)",
-  position: "relative",
-});
-
 export const cardTitle = style({
   fontSize: vars.fontSize.h2,
   fontWeight: vars.fontWeight.semibold,
@@ -122,28 +92,6 @@ export const textareaWrap = style({
   position: "relative",
 });
 
-export const textarea = style({
-  width: "100%",
-  backgroundColor: vars.color.surfaceContainerLow,
-  border: "none",
-  borderRadius: "16px",
-  padding: vars.space.gutter,
-  paddingBottom: "40px",
-  fontSize: vars.fontSize.bodyLg,
-  color: vars.color.onSurface,
-  resize: "none",
-  minHeight: "140px",
-  outline: "none",
-  selectors: {
-    "&:focus": {
-      boxShadow: `0 0 0 2px rgba(93, 95, 239, 0.15)`,
-    },
-    "&::placeholder": {
-      color: "rgba(70, 69, 85, 0.4)",
-    },
-  },
-});
-
 export const charCount = style({
   position: "absolute",
   bottom: "16px",
@@ -158,27 +106,6 @@ export const fabRow = style({
   justifyContent: "center",
   marginTop: "-24px",
   zIndex: 10,
-});
-
-export const submitBtn = style({
-  backgroundColor: vars.color.secondaryContainer,
-  color: vars.color.onSecondaryContainer,
-  padding: "16px 32px",
-  borderRadius: vars.radii.full,
-  fontSize: vars.fontSize.labelSm,
-  fontWeight: vars.fontWeight.semibold,
-  letterSpacing: vars.letterSpacing.wide,
-  border: "none",
-  cursor: "pointer",
-  display: "inline-flex",
-  alignItems: "center",
-  gap: "12px",
-  boxShadow: "0 12px 32px rgba(252, 212, 0, 0.35)",
-  transition: "opacity 0.2s, transform 0.2s",
-  selectors: {
-    "&:hover": { opacity: 0.92 },
-    "&:active": { transform: "scale(0.95)" },
-  },
 });
 
 export const quoteSection = style({

@@ -1,17 +1,17 @@
+import { Button } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
-import * as styles from "../../support.css";
 
 export default function ActionButtons() {
   return (
     <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-      <button type="button" className={styles.primaryBtn}>
+      <Button variant="primary" size="lg" fullWidth>
         <MaterialIcon name="chat_bubble" />
         1:1 문의하기
-      </button>
-      <button type="button" className={styles.secondaryBtn}>
+      </Button>
+      <Button variant="ghost" size="lg" fullWidth>
         <MaterialIcon name="draw" />
         의견 보내기
-      </button>
+      </Button>
     </section>
   );
 }

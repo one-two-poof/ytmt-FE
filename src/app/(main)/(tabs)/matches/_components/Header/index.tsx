@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { Avatar } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
 import * as styles from "../../matches.css";
 
@@ -14,9 +14,7 @@ export default function Header({ avatarSrc }: Props) {
         <MaterialIcon name="arrow_back" style={{ color: "#4343d5" }} />
       </Link>
       <h1 className={styles.headerTitle}>나와 비슷한 생각들</h1>
-      <div className={styles.avatar}>
-        <Image src={avatarSrc} alt="" width={40} height={40} className={styles.avatarImg} />
-      </div>
+      <Avatar src={avatarSrc} alt="" size="md" />
     </header>
   );
 }

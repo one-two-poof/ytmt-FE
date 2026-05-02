@@ -35,14 +35,6 @@ export const headerTitle = style({
   color: vars.color.primary,
 });
 
-export const avatarSm = style({
-  width: "40px",
-  height: "40px",
-  borderRadius: vars.radii.full,
-  overflow: "hidden",
-  border: `2px solid ${vars.color.primaryFixed}`,
-});
-
 export const main = style({
   paddingTop: "96px",
   paddingBottom: "128px",
@@ -54,14 +46,6 @@ export const main = style({
   display: "flex",
   flexDirection: "column",
   gap: vars.space.stackLg,
-});
-
-export const glass = style({
-  background: "rgba(255,255,255,0.75)",
-  backdropFilter: "blur(12px)",
-  border: "1px solid rgba(255,255,255,0.4)",
-  borderRadius: "24px",
-  boxShadow: "0 10px 40px -10px rgba(67,67,213,0.1)",
 });
 
 export const profileSection = style({
@@ -107,29 +91,6 @@ export const statsGrid = style({
   gridTemplateColumns: "1fr 1fr",
   gap: vars.space.gutter,
 });
-
-export const statCard = style([
-  glass,
-  {
-    padding: vars.space.gutter,
-    textAlign: "center",
-  },
-]);
-
-export const sentenceCard = style([
-  glass,
-  {
-    padding: vars.space.stackMd,
-    position: "relative",
-  },
-]);
-
-export const menu = style([
-  glass,
-  {
-    overflow: "hidden",
-  },
-]);
 
 export const menuRow = style({
   display: "flex",

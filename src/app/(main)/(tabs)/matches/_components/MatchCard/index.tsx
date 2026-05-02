@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { Avatar, Badge, Card } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
 import * as styles from "../../matches.css";
 
@@ -14,15 +14,13 @@ export interface MatchData {
 
 export default function MatchCard({ id, pct, name, time, img, text }: MatchData) {
   return (
-    <article className={styles.card}>
-      <div className={styles.matchBadge}>
+    <Card style={{ display: "flex", flexDirection: "column", gap: "12px", position: "relative", overflow: "hidden" }}>
+      <Badge variant="spark" style={{ position: "absolute", top: "16px", right: "16px" }}>
         <MaterialIcon name="bolt" filled style={{ fontSize: "14px" }} />
-        <span>{pct} 일치</span>
-      </div>
+        {pct} 일치
+      </Badge>
       <div className={styles.row}>
-        <div className={styles.miniAvatar}>
-          <Image src={img} alt="" width={48} height={48} className={styles.avatarImg} />
-        </div>
+        <Avatar src={img} alt="" size="md" />
         <div>
           <p style={{ fontWeight: 600, fontSize: "13px", letterSpacing: "0.05em" }}>{name}</p>
           <p style={{ fontSize: "12px", color: "#94a3b8" }}>{time}</p>
@@ -33,6 +31,6 @@ export default function MatchCard({ id, pct, name, time, img, text }: MatchData)
         <MaterialIcon name="forum" />
         대화 시작하기
       </Link>
-    </article>
+    </Card>
   );
 }

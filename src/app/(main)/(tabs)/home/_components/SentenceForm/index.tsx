@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Badge, Button, Card, Textarea } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
 import * as styles from "../../home.css";
 
@@ -19,10 +20,10 @@ export default function SentenceForm() {
             오늘의 문장 등록
           </span>
         </div>
-        <span className={styles.badge}>남은 횟수: 2/3</span>
+        <Badge variant="primary">남은 횟수: 2/3</Badge>
       </section>
 
-      <div className={styles.glassCard}>
+      <Card style={{ position: "relative" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
           <label htmlFor="thought-input" className={styles.cardTitle}>
             당신의 진심 어린
@@ -36,25 +37,26 @@ export default function SentenceForm() {
           </p>
         </div>
         <div className={styles.textareaWrap}>
-          <textarea
+          <Textarea
             id="thought-input"
-            className={styles.textarea}
+            multiline
             placeholder="지금 머릿속을 스치는 생각을 자유롭게 적어보세요..."
             rows={6}
             maxLength={MAX_LEN}
             value={text}
             onChange={(e) => setText(e.target.value)}
+            style={{ paddingBottom: "40px", fontSize: "18px", minHeight: "140px" }}
           />
           <span className={styles.charCount}>{text.length}/{MAX_LEN}</span>
         </div>
         <div className={styles.sparkDecor} aria-hidden />
-      </div>
+      </Card>
 
       <div className={styles.fabRow}>
-        <button type="button" className={styles.submitBtn}>
+        <Button variant="fab" size="lg">
           <MaterialIcon name="send" filled />
           등록하기
-        </button>
+        </Button>
       </div>
     </>
   );

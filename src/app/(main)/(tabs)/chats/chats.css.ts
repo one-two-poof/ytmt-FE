@@ -61,14 +61,6 @@ export const row = style({
   },
 });
 
-export const avatar = style({
-  width: "52px",
-  height: "52px",
-  borderRadius: vars.radii.full,
-  overflow: "hidden",
-  flexShrink: 0,
-});
-
 export const preview = style({
   fontSize: vars.fontSize.bodyMd,
   color: vars.color.onSurfaceVariant,

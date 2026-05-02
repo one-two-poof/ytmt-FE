@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Avatar } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
 import * as styles from "../../mypage.css";
 
@@ -13,9 +13,7 @@ export default function Header({ avatarSrc }: Props) {
         <MaterialIcon name="menu" style={{ color: "#4343d5" }} />
       </button>
       <h1 className={styles.headerTitle}>마이페이지</h1>
-      <div className={styles.avatarSm}>
-        <Image src={avatarSrc} alt="" width={40} height={40} style={{ objectFit: "cover" }} />
-      </div>
+      <Avatar src={avatarSrc} alt="" size="sm" />
     </header>
   );
 }
