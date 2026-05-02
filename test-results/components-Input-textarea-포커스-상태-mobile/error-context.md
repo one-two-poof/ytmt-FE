@@ -1,0 +1,24 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: components.test.ts >> Input >> textarea 포커스 상태
+- Location: tests/visual/components.test.ts:96:7
+
+# Error details
+
+```
+Error: browserType.launch: Executable doesn't exist at /Users/sanginjeong/Library/Caches/ms-playwright/webkit_mac14_arm64_special-2251/pw_run.sh
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     pnpm exec playwright install                           ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+```
