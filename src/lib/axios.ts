@@ -6,15 +6,23 @@ const api = axios.create({
   withCredentials: true,
 });
 
-// request: 카카오 로그인 후 발급된 JWT를 Authorization 헤더에 첨부
 api.interceptors.request.use((config) => {
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem("access_token");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+  }
   return config;
 });
 
-// response: 401 응답 시 /login으로 리다이렉트 (토큰 만료 처리)
 api.interceptors.response.use(
   (response) => response,
   (error) => {
+    if (error.response?.status === 401 && typeof window !== "undefined") {
+      localStorage.removeItem("access_token");
+      window.location.replace("/login");
+    }
     return Promise.reject(error);
   }
 );

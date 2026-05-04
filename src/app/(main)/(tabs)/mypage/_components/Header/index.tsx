@@ -3,7 +3,7 @@ import { MaterialIcon } from "@/components/shell";
 import * as styles from "../../mypage.css";
 
 interface Props {
-  avatarSrc: string;
+  avatarSrc?: string;
 }
 
 export default function Header({ avatarSrc }: Props) {

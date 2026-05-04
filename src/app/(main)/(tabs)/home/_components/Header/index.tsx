@@ -1,12 +1,13 @@
+"use client";
+
 import { Avatar } from "@/components/ui";
 import { MaterialIcon } from "@/components/shell";
+import { useMe } from "@/hooks/useMe";
 import * as styles from "../../home.css";
 
-interface Props {
-  avatarSrc: string;
-}
-
-export default function Header({ avatarSrc }: Props) {
+export default function Header() {
+  const { data: me } = useMe();
+  console.log(me);
   return (
     <header className={styles.header}>
       <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
@@ -15,7 +16,7 @@ export default function Header({ avatarSrc }: Props) {
         </button>
         <h1 className={styles.headerTitle}>너도나도</h1>
       </div>
-      <Avatar src={avatarSrc} alt="프로필" size="sm" />
+      <Avatar src={me?.profile_image ?? undefined} alt="프로필" size="sm" />
     </header>
   );
 }
